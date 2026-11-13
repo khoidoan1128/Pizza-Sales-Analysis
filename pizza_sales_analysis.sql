@@ -35,7 +35,7 @@ SELECT
 FROM cte;
 
 -- REVENUE BY MONTHS
-WITH cte as(
+WITH r_months as(
 	SELECT
 		MONTH(order_date) as `Month`,
 			round(
@@ -48,7 +48,7 @@ CONCAT(
         (current_revenue - LAG(current_revenue, 1) OVER (ORDER BY `Month`)) 
         / LAG(current_revenue, 1) OVER (ORDER BY `Month`) * 100, 2), 
 '%') AS revenue_growth
-FROM cte;
+FROM r_months;
 
 -- TOTAL SALES BY QUARTER
 SELECT 
