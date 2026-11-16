@@ -52,11 +52,19 @@ FROM cte;
 
 -- TOTAL SALES BY QUARTER
 SELECT 
-ROUND(
-	SUM(total_price),0) as revenue,
+	ROUND(
+		SUM(total_price),0) as revenue,
 QUARTER(order_date) as Quarter_
 FROM pizza
 GROUP BY Quarter_;
+
+-- ORDER BY DAY
+SELECT
+    DAYNAME(order_date) as days,
+    COUNT(distinct order_id) as total_orders
+FROM pizza
+GROUP BY DAYNAME(order_date)
+ORDER BY total_orders DESC;
 
 -- AVERAGE ORDERS PER HOURS
 WITH daily_hours_oders as (
@@ -101,10 +109,11 @@ GROUP BY pizza_category;
 SELECT
 pizza_category,
 pizza_size,
-COUNT(*) as total_sales,
+	COUNT(*) as total_sales,
 RANK() 
 	OVER(
 		partition by pizza_category ORDER BY COUNT(*)) as r_pizza
 FROM pizza
-GROUP BY pizza_category,pizza_size
+GROUP BY pizza_category,pizza_size;
+
 
