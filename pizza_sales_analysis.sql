@@ -92,11 +92,13 @@ GROUP BY pizza_name;
 SELECT 
 pizza_name,
 SUM(quantity) as pizza_sold,
-RANK() OVER(ORDER BY COUNT(quantity) DESC) as top_5_pizza_sold
+RANK() 
+	OVER(
+		ORDER BY COUNT(quantity) DESC) as top_5_pizza_sold
 FROM pizza
 GROUP BY pizza_name;
 
--- Total sales Category
+-- TOTAL SALES BY CATEGORY
 SELECT
 pizza_category,
 	ROUND(
@@ -105,7 +107,7 @@ pizza_category,
 FROM pizza
 GROUP BY pizza_category;
 
--- TOTAL SALES BY PIZZA SIZE AND CATEGORY
+-- TOTAL PIZZA SIZE AND CATEGORY SOLD
 SELECT
 pizza_category,
 pizza_size,
