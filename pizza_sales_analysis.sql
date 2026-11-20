@@ -92,13 +92,11 @@ GROUP BY pizza_name;
 SELECT 
 pizza_name,
 SUM(quantity) as pizza_sold,
-RANK() 
-	OVER(
-		ORDER BY COUNT(quantity) DESC) as top_5_pizza_sold
+RANK() OVER(ORDER BY COUNT(quantity) DESC) as top_5_pizza_sold
 FROM pizza
 GROUP BY pizza_name;
 
--- TOTAL SALES BY CATEGORY
+-- Total sales Category
 SELECT
 pizza_category,
 	ROUND(
@@ -107,15 +105,32 @@ pizza_category,
 FROM pizza
 GROUP BY pizza_category;
 
--- TOTAL PIZZA SIZE AND CATEGORY SOLD
+-- TOTAL SALES BY PIZZA SIZE AND CATEGORY
 SELECT
 pizza_category,
 pizza_size,
-	COUNT(*) as total_sales,
+COUNT(*) as total_pizza_sold,
 RANK() 
 	OVER(
 		partition by pizza_category ORDER BY COUNT(*)) as r_pizza
 FROM pizza
 GROUP BY pizza_category,pizza_size;
 
+-- AVG PIZZA SIZE PER ORDER
+SELECT 
+    pizza_size,
+    ROUND(SUM(quantity) / COUNT(DISTINCT order_id), 2) AS avg_pizza_per_order
+FROM pizza
+GROUP BY pizza_size
+ORDER BY avg_pizza_per_order DESC;
+
+-- DIVIDE PIZZA NAME TO CATEGORY
+SELECT 
+pizza_category,
+pizza_name,
+round(
+		SUM(total_price),2) as total_s
+FROM pizza
+GROUP BY pizza_category, pizza_name
+ORDER BY pizza_category, total_s desc;
 
