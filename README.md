@@ -36,11 +36,11 @@ Về doanh thu, thứ 5 tiếp tục dẫn đầu với khoảng **136K USD**, t
 
 Xét theo khung giờ, hoạt động đặt hàng tập trung chủ yếu vào buổi trưa (12h–13h) và buổi tối (17h–19h). Đây là những khoảng thời gian có nhu cầu đặt hàng cao, tương ứng với các khung giờ ăn uống phổ biến.
 
-Từ những quan sát trên, doanh nghiệp có thể ưu tiên bố trí nhân sự và chuẩn bị nguyên liệu vào các khung giờ cao điểm để đảm bảo khả năng phục vụ. Đồng thời, có thể thử nghiệm các chương trình combo hoặc ưu đãi trong những khung giờ thấp điểm nhằm phân bổ nhu cầu đặt hàng tốt hơn và cải thiện doanh thu trong ngày.
+Từ những quan sát trên, doanh nghiệp có thể thử nghiệm các chương trình combo hoặc nước uống tặng kèm trong những khung giờ cao điểm để tối ưu hiệu quả doanh thu trong ngày. Đồng thời có thể thử những chương trình như "Happy Hour" vào những khung giờ ít đơn hơn.
 
 ## 5. Product Performance Analysis – Phân tích hiệu suất sản phẩm
 
-Xét theo sản lượng, Top 5 sản phẩm bán chạy nhất lần lượt bao gồm Classic Deluxe Pizza (2,453 chiếc), Barbecue Chicken Pizza (2,432 chiếc), Hawaiian Pizza (2,422 chiếc), Pepperoni Pizza và Thai Chicken Pizza (2,371 chiếc).
+Xét theo sản lượng, Top 5 sản phẩm bán chạy nhất lần lượt bao gồm Classic Deluxe Pizza (2,453 cái), Barbecue Chicken Pizza (2,432 cái), Hawaiian Pizza (2,422 cái), Pepperoni Pizza và Thai Chicken Pizza (2,371 cái).
 
 Tuy nhiên, khi xét theo doanh thu, Thai Chicken Pizza và Barbecue Chicken Pizza lại dẫn đầu với khoảng **43K USD mỗi sản phẩm**, tiếp theo là California Chicken Pizza và Classic Deluxe Pizza.
 
