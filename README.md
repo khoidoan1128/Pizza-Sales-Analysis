@@ -3,7 +3,7 @@
 
 ## 1. Executive Summary – Tổng quan dự án
 
-Dự án tập trung phân tích dữ liệu bán hàng của một cửa hàng Pizza trong vòng một năm nhằm đánh giá hiệu quả kinh doanh, xác định xu hướng doanh thu, phân tích hiệu suất sản phẩm và tìm hiểu các yếu tố ảnh hưởng đến hoạt động bán hàng.
+Tệp dữ liệu gồm 12 cột, 583452 dòng . Dự án tập trung phân tích dữ liệu bán hàng của một cửa hàng Pizza trong vòng một năm nhằm đánh giá hiệu quả kinh doanh, xác định xu hướng doanh thu, phân tích hiệu suất sản phẩm và tìm hiểu các yếu tố ảnh hưởng đến hoạt động bán hàng.
 
 Kết quả phân tích ghi nhận:
 
