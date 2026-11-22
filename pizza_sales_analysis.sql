@@ -119,7 +119,7 @@ GROUP BY pizza_category,pizza_size;
 -- AVG PIZZA SIZE PER ORDER
 SELECT 
     pizza_size,
-    ROUND(SUM(quantity) / COUNT(DISTINCT order_id), 2) AS avg_pizza_per_order
+    ROUND(SUM(quantity) / COUNT(DISTINCT order_id), 2) as avg_pizza_per_order
 FROM pizza
 GROUP BY pizza_size
 ORDER BY avg_pizza_per_order DESC;
@@ -133,4 +133,37 @@ round(
 FROM pizza
 GROUP BY pizza_category, pizza_name
 ORDER BY pizza_category, total_s desc;
+
+--CHECK MONTHS BETWEEN 8 AND 10 
+SELECT
+    MONTH(order_date) as month,
+    pizza_category,
+    pizza_size,
+    SUM(quantity) as total_quantity,
+    SUM(total_price) as revenue,
+    COUNT(DISTINCT order_id) as total_orders
+FROM pizza
+WHERE MONTH(order_date) BETWEEN 8 AND 10
+GROUP BY
+    MONTH(order_date),
+    pizza_category,
+    pizza_size
+ORDER BY
+    month,
+    pizza_category,
+    pizza_size;
+
+-- QUANTITY, SALARY BY SIZE
+SELECT
+    pizza_category,
+    pizza_size,
+    SUM(quantity) as total_quantity,
+    SUM(total_price) as revenue
+FROM pizza
+GROUP BY
+    pizza_category,
+    pizza_size
+ORDER BY
+    pizza_category,
+    total_quantity DESC;
 
