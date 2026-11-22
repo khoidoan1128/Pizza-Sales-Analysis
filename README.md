@@ -166,4 +166,24 @@ Dựa trên các kết quả phân tích, một số giải pháp có thể đư
 **4. Điều tra nguyên nhân suy giảm doanh thu**
 
 - Phân tích sâu sản lượng theo Category và Size trong giai đoạn tháng 8–10.
-- X
+- Xác định các sản phẩm có mức suy giảm lớn nhất.
+- Kiểm tra dữ liệu tồn kho, giá bán và lịch sử khuyến mãi nếu có.
+- Theo dõi sự thay đổi của Orders, Quantity và AOV để xác định yếu tố đóng góp vào biến động doanh thu.
+
+**5. Đánh giá hiệu quả các chương trình kinh doanh**
+
+Sau khi triển khai các giải pháp, doanh nghiệp cần theo dõi những chỉ số như Revenue Growth, Total Orders, Average Order Value và Quantity Sold để đánh giá mức độ cải thiện.
+
+---
+
+## 9. Conclusion – Kết luận
+
+Qua quá trình phân tích dữ liệu bán hàng trong một năm, cửa hàng ghi nhận tổng doanh thu khoảng 817.86K USD với 21,350 đơn hàng và 49,574 pizza được bán ra.
+
+Classic là danh mục đóng góp sản lượng lớn nhất, trong khi Size L là kích thước mang lại doanh thu cao nhất. Bên cạnh đó, phân tích sản phẩm cho thấy Barbecue Chicken và Thai Chicken có khả năng tạo doanh thu cao hơn Classic Deluxe dù sản lượng tiêu thụ thấp hơn.
+
+Một trong những vấn đề đáng chú ý là doanh thu suy giảm trong giai đoạn tháng 8–10, đặc biệt là tháng 9. Phân tích chi tiết cho thấy nhiều Category cùng chịu ảnh hưởng, trong đó Size S ghi nhận mức giảm doanh thu và sản lượng đáng kể.
+
+Từ những phát hiện này, doanh nghiệp cần tập trung tối ưu danh mục sản phẩm, cải thiện giá trị đơn hàng trung bình, phân bổ hoạt động bán hàng theo nhu cầu khách hàng và tiếp tục điều tra các yếu tố ảnh hưởng đến sản lượng tiêu thụ.
+
+Những giải pháp trên có thể giúp doanh nghiệp hiểu rõ hơn về hiệu quả kinh doanh, cải thiện hoạt động bán hàng và xây dựng chiến lược phát triển dựa trên dữ liệu.
