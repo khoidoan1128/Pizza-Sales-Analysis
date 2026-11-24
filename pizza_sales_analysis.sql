@@ -3,14 +3,13 @@ FROM pizza;
 
 -- CONVERT TO DATE TYPE
 UPDATE pizza 
-	SET order_date = STR_TO_DATE(order_date, '%d-%m-%Y');
+SET order_date = STR_TO_DATE(order_date, '%d-%m-%Y');
 ALTER TABLE pizza 
-	MODIFY COLUMN order_date DATE;
+MODIFY COLUMN order_date DATE;
 
 -- TOTAL REVENUE
 SELECT 
-ROUND(
-	SUM(total_price),0) as Salary
+ROUND(SUM(total_price),0) as Salary
 FROM pizza;
 
 -- TOTAL QUANTITY
@@ -26,8 +25,7 @@ FROM pizza;
 -- AOV
 WITH cte as(
 SELECT 
-	ROUND(
-		SUM(total_price),0) as total_salary,
+ROUND(SUM(total_price),0) as total_salary,
 COUNT(distinct order_id)  as total_orders
 FROM pizza)
 SELECT
@@ -36,48 +34,43 @@ FROM cte;
 
 -- REVENUE BY MONTHS
 WITH cte as(
-	SELECT
-		MONTH(order_date) as `Month`,
-			ROUND(
-				SUM(total_price),0) as current_revenue
+SELECT
+MONTH(order_date) as `Month`,
+ROUND(SUM(total_price),0) as current_revenue
 FROM pizza
 GROUP BY MONTH(order_date))
 SELECT *,
-CONCAT(
-    ROUND(
-        (current_revenue - LAG(current_revenue, 1) OVER (ORDER BY `Month`)) 
-        / LAG(current_revenue, 1) OVER (ORDER BY `Month`) * 100, 2), 
+CONCAT(ROUND((current_revenue - LAG(current_revenue, 1) OVER (ORDER BY `Month`)) 
+	/ LAG(current_revenue, 1) OVER (ORDER BY `Month`) * 100, 2), 
 '%') AS revenue_growth
 FROM cte;
 
 -- TOTAL SALES BY QUARTER
 SELECT 
-	ROUND(
-		SUM(total_price),0) as revenue,
+ROUND(SUM(total_price),0) as revenue,
 QUARTER(order_date) as Quarter_
 FROM pizza
 GROUP BY Quarter_;
 
 -- ORDER BY DAY
 SELECT
-    DAYNAME(order_date) as days,
-    COUNT(distinct order_id) as total_orders
+DAYNAME(order_date) as days,
+COUNT(distinct order_id) as total_orders
 FROM pizza
 GROUP BY DAYNAME(order_date)
 ORDER BY total_orders DESC;
 
 -- AVERAGE ORDERS PER HOURS
 WITH daily_hours_oders as (
-	SELECT 
-		HOUR(order_time) as order_hour,
+SELECT 
+HOUR(order_time) as order_hour,
 COUNT(DISTINCT order_id) as daily_orders
 FROM pizza
 GROUP BY DATE(order_date), HOUR(order_time)
 )
 SELECT 
 order_hour,
-ROUND(
-	AVG(daily_orders), 2) as avg_orders_per_hour
+ROUND(AVG(daily_orders), 2) as avg_orders_per_hour
 FROM daily_hours_oders
 GROUP BY order_hour
 ORDER BY avg_orders_per_hour DESC;
@@ -99,9 +92,7 @@ GROUP BY pizza_name;
 -- Total sales Category
 SELECT
 pizza_category,
-	ROUND(
-		SUM(total_price),0
-) as revenue_c
+ROUND(SUM(total_price),0) as revenue_c
 FROM pizza
 GROUP BY pizza_category;
 
@@ -110,16 +101,14 @@ SELECT
 pizza_category,
 pizza_size,
 COUNT(*) as total_pizza_sold,
-RANK() 
-	OVER(
-		partition by pizza_category ORDER BY COUNT(*)) as r_pizza
+RANK() OVER(partition by pizza_category ORDER BY COUNT(*)) as r_pizza
 FROM pizza
 GROUP BY pizza_category,pizza_size;
 
 -- AVG PIZZA SIZE PER ORDER
 SELECT 
-    pizza_size,
-    ROUND(SUM(quantity) / COUNT(DISTINCT order_id), 2) as avg_pizza_per_order
+pizza_size,
+ROUND(SUM(quantity) / COUNT(DISTINCT order_id), 2) as avg_pizza_per_order
 FROM pizza
 GROUP BY pizza_size
 ORDER BY avg_pizza_per_order DESC;
@@ -128,50 +117,49 @@ ORDER BY avg_pizza_per_order DESC;
 SELECT 
 pizza_category,
 pizza_name,
-round(
-		SUM(total_price),2) as total_s
+round(SUM(total_price),2) as total_s
 FROM pizza
 GROUP BY pizza_category, pizza_name
 ORDER BY pizza_category, total_s desc;
 
 --CHECK MONTHS BETWEEN 8 AND 10 
 SELECT
-    MONTH(order_date) as month,
-    pizza_category,
-    pizza_size,
-    SUM(quantity) as total_quantity,
-    SUM(total_price) as revenue,
-    COUNT(DISTINCT order_id) as total_orders
+MONTH(order_date) as month,
+pizza_category,
+pizza_size,
+SUM(quantity) as total_quantity,
+SUM(total_price) as revenue,
+COUNT(DISTINCT order_id) as total_orders
 FROM pizza
 WHERE MONTH(order_date) BETWEEN 8 AND 10
 GROUP BY
-    MONTH(order_date),
-    pizza_category,
-    pizza_size
+MONTH(order_date),
+pizza_category,
+pizza_size
 ORDER BY
-    month,
-    pizza_category,
-    pizza_size;
+month,
+pizza_category,
+pizza_size;
 
 -- QUANTITY, SALARY BY SIZE
 SELECT
-    pizza_category,
-    pizza_size,
-    SUM(quantity) as total_quantity,
-    SUM(total_price) as revenue
+pizza_category,
+pizza_size,
+SUM(quantity) as total_quantity,
+SUM(total_price) as revenue
 FROM pizza
 GROUP BY
-    pizza_category,
-    pizza_size
+pizza_category,
+pizza_size
 ORDER BY
-    pizza_category,
-    total_quantity DESC;
+pizza_category,
+total_quantity DESC;
 
 -- AVG ORDERS VALUE BY CATEGORY 
 SELECT
-	pizza_category,
+pizza_category,
 Round(
-	sum(total_price) / count(distinct order_id),2) as avg_ctg
+sum(total_price) / count(distinct order_id),2) as avg_ctg
 FROM pizza
 group by pizza_category
 order by avg_ctg desc;
