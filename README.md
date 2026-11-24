@@ -45,22 +45,19 @@ Chênh lệch giữa hai tháng đạt khoảng 8.53K USD, cho thấy hiệu su�
 
 ## 3. Pizza Category Analysis – Phân tích danh mục sản phẩm
 
-Xét theo sản lượng tiêu thụ, Classic dẫn đầu với khoảng 15K pizza, chiếm 30.03% tổng sản lượng và đóng góp khoảng 220K USD doanh thu.
+Xét theo sản lượng tiêu thụ, Classic dẫn đầu với khoảng 15K pizza, chiếm 30.03% tổng sản lượng và đóng góp khoảng 220K USD doanh thu. Ngược lại, Chicken có sản lượng thấp nhất với khoảng 11K pizza, chiếm 22.29%. Supreme và Veggie lần lượt chiếm khoảng 24.18% và 23.50%.
 
-Ngược lại, Chicken có sản lượng thấp nhất với khoảng 11K pizza, chiếm 22.29%. Supreme và Veggie lần lượt chiếm khoảng 24.18% và 23.50%.
+Mặc dù Classic đang dẫn đầu về sản lượng, chênh lệch giữa Chicken, Supreme và Veggie không quá lớn. Điều này cho thấy nhu cầu tiêu thụ giữa ba danh mục này tương đối gần nhau, đồng thời cho thấy Chicken và Supreme vẫn còn dư địa để gia tăng sản lượng.
 
-Mặc dù Classic đang dẫn đầu về sản lượng, chênh lệch giữa Chicken, Supreme và Veggie không quá lớn. Điều này cho thấy nhu cầu tiêu thụ giữa ba danh mục này tương đối gần nhau.
+Khi phân tích doanh thu theo từng tháng, Classic tiếp tục duy trì vị trí dẫn đầu trong phần lớn thời gian. Doanh thu của các danh mục có xu hướng biến động tương đối đồng thời ở một số giai đoạn, đặc biệt khi nhiều nhóm sản phẩm cùng suy giảm trong tháng 9–10.
 
-Khi phân tích doanh thu theo từng tháng, Classic tiếp tục duy trì vị trí dẫn đầu trong phần lớn thời gian. Doanh thu của các danh mục có xu hướng biến động tương đối đồng thời ở một số giai đoạn, đặc biệt là khi nhiều nhóm sản phẩm cùng suy giảm vào tháng 9–10.
+Đáng chú ý, Chicken và Veggie ghi nhận mức doanh thu thấp trong tháng 10, trong khi Supreme phục hồi đáng kể so với tháng 9. Classic cũng có xu hướng suy giảm trong giai đoạn này. Điều này cho thấy sự suy giảm doanh thu không chỉ xuất hiện ở một danh mục riêng lẻ mà liên quan đến nhiều nhóm sản phẩm. Vì vậy, cần tiếp tục phân tích sâu hơn để xác định liệu sự suy giảm đến từ sản lượng tiêu thụ, số lượng đơn hàng hay giá trị đơn hàng.
 
-Đáng chú ý, Chicken và Veggie ghi nhận mức doanh thu thấp trong tháng 10, trong khi Supreme phục hồi đáng kể so với tháng 9. Classic cũng có xu hướng suy giảm trong giai đoạn này.
+Một điểm đáng chú ý khác xuất hiện khi so sánh doanh thu bình quân trên mỗi đơn hàng có chứa từng danh mục. Mặc dù Classic dẫn đầu về tổng doanh thu, chỉ số này của Classic chỉ đạt 20.26, thấp hơn Chicken (22.95) và Supreme (22.92). Điều này cho thấy các đơn hàng có chứa Chicken và Supreme đang tạo ra giá trị doanh thu bình quân cao hơn so với các đơn hàng có chứa Classic.
 
-Điều này cho thấy sự suy giảm doanh thu không chỉ xuất hiện ở một danh mục riêng lẻ mà có liên quan đến nhiều nhóm sản phẩm.
+Kết hợp với kết quả phân tích sản lượng, Chicken và Supreme là hai danh mục có tiềm năng tăng trưởng đáng chú ý. Mặc dù chưa đạt sản lượng tiêu thụ tương đương Classic, hai danh mục này lại có giá trị doanh thu bình quân trên đơn hàng cao hơn. Do đó, việc gia tăng số lượng đơn hàng có chứa Chicken và Supreme có thể trở thành một hướng đi giúp doanh nghiệp cải thiện tổng doanh thu và thu hẹp khoảng cách với Classic
 
-Doanh nghiệp nên tiếp tục duy trì hiệu suất của Classic, đồng thời tìm hiểu những sản phẩm thuộc Chicken và Veggie có tiềm năng tăng trưởng. Có thể thử nghiệm các chương trình combo, ưu đãi nâng size hoặc khuyến mãi theo từng danh mục nhằm cải thiện sản lượng tiêu thụ.
-
-Tuy nhiên, hiệu quả của những chương trình này cần được đánh giá dựa trên doanh thu và lợi nhuận sau khuyến mãi.
-
+Doanh nghiệp có thể tích hợp các sản phẩm thuộc Chicken và Supreme vào khu vực gợi ý trên website hoặc hệ thống đặt hàng, đặc biệt tại bước khách hàng lựa chọn pizza hoặc trước khi thanh toán. Ưu tiên hiển thị các sản phẩm bán chạy và có giá trị doanh thu tốt nhằm tăng khả năng khách hàng lựa chọn hai danh mục này.
 ## 4. Pizza Size Analysis – Phân tích kích thước sản phẩm
 
 Xét theo kích thước sản phẩm, Size L dẫn đầu với 18,956 chiếc, tiếp theo là Size M với 15,635 chiếc và Size S với 14,403 chiếc.
