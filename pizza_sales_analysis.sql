@@ -167,3 +167,12 @@ ORDER BY
     pizza_category,
     total_quantity DESC;
 
+-- AVG ORDERS VALUE BY CATEGORY 
+SELECT
+	pizza_category,
+Round(
+	sum(total_price) / count(distinct order_id),2) as avg_ctg
+FROM pizza
+group by pizza_category
+order by avg_ctg desc;
+
