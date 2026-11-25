@@ -12,10 +12,9 @@ SELECT
     ) AS AOV
 FROM pizza;
 
-SELECT 
-    pizza_size,
-    ROUND(SUM(quantity) / COUNT(DISTINCT order_id), 2) AS avg_pizza_per_order
-FROM pizza
-GROUP BY pizza_size
-ORDER BY avg_pizza_per_order DESC;
+-- AVG PER ORDER
+SELECT
+sum(quantity) / count(distinct order_id) 
+FROM pizza;
+
 
